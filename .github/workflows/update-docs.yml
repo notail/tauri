@@ -28,8 +28,10 @@ jobs:
   update-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate TypeScript docs
-        run: tree
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Generate TypeScript files
+        run: tree .
 
 #       # Applying Version
 #       - name: set docs' Tauri version
