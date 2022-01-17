@@ -19,8 +19,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Generate TypeScript files
-        working-directory: tooling/api
-        run: tree .
+        uses: tauri-apps/github-actions/update-typescript-docs@dev
+        with:
+          docs-input-path: tooling/api
 
 #       # Applying Version
 #       - name: set docs' Tauri version
